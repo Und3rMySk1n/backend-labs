@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-11 19:51:07
+         compiled from "Z:\home\repo1\www\template\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:281015550cf05578c51-60191517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'd0bbaec16d443fd6954dddb4a9d703eca28cc4e9' => 
+    array (
+      0 => 'Z:\\home\\repo1\\www\\template\\header.tpl',
+      1 => 1431359466,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '281015550cf05578c51-60191517',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_5550cf056627c5_53817431',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5550cf056627c5_53817431')) {function content_5550cf056627c5_53817431($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <title>HTML-справочник</title>
@@ -101,4 +122,4 @@
 		  </aside>
 				
 		<div class="content">	
-			
+			<?php }} ?>

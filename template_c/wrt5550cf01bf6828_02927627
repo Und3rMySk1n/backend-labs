@@ -1,4 +1,25 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-11 19:47:13
+         compiled from "Z:\home\repo1\www\template\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:253815550a311515897-96271112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'd0bbaec16d443fd6954dddb4a9d703eca28cc4e9' => 
+    array (
+      0 => 'Z:\\home\\repo1\\www\\template\\header.tpl',
+      1 => 1431359233,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '253815550a311515897-96271112',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_5550a31174f0a6_79785894',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5550a31174f0a6_79785894')) {function content_5550a31174f0a6_79785894($_smarty_tpl) {?><!DOCTYPE html>
 <html>
   <head>
     <title>HTML-справочник</title>
@@ -65,8 +86,9 @@
               <li class="collapsed"><a href="#">&lt;audio&gt;</a></li>
               <li class="leaf"><a href="#">&lt;b&gt;</a></li>
               <li class="collapsed"><a href="#" title="">&lt;base&gt;</a></li>
-			  <li class="collapsed"><a href="#">&lt;basefont&gt;</a></li>
-			  <li class="leaf"><a href="#" title="Тег ">&lt;bdi&gt;</a></li>
+			  <li class="collapsed"><a href="/html/basefont">&lt;basefont&gt;</a></li>
+			  <li class="leaf"><a href="/html/bdi" title="Тег ">&lt;bdi&gt;</a></li>
+			  <li class="collapsed"><a href="/html/bdo">&lt;bdo&gt;</a></li>
             </ul>		
 		  </div>
 		  
@@ -75,23 +97,17 @@
 	    <div id="menu-menu-css" class="block">
 		  <h2 class="block_title">Справочник CSS</h2>		
 		  <div class="block_content scroll">
-			<ul class="menu"><li class="first leaf"><a href="#">Как пользоваться справочником</a></li>
-              <li class="leaf"><a href="#" title="">!important</a></li>
-              <li class="leaf"><a href="#">-moz-border-bottom-colors</a></li>
-              <li class="leaf"><a href="#">-moz-border-left-colors</a></li>
-              <li class="leaf"><a href="#">-moz-border-right-colors</a></li>
-              <li class="leaf"><a href="#">-moz-border-top-colors</a></li>
-              <li class="leaf"><a href="#">-moz-linear-gradient</a></li>
-              <li class="leaf"><a href="#">-moz-orient</a></li>
-              <li class="leaf"><a href="#">-moz-radial-gradient</a></li>
-              <li class="leaf"><a href="#" title="">-moz-user-select</a></li>
-              <li class="leaf"><a href="#">-ms-interpolation-mode</a></li>
-			  <li class="leaf"><a href="#">-ms-radial-gradient</a></li>
-              <li class="leaf"><a href="#">-o-linear-gradient</a></li>
-              <li class="leaf"><a href="#">-o-object-fit</a></li>
-			  <li class="leaf"><a href="#">-o-radial-gradient</a></li>
-              <li class="leaf"><a href="#">-webkit-linear-gradient</a></li>
-			  <li class="leaf"><a href="#">-webkit-radial-gradient</a></li>
+			<ul class="menu"><li class="first leaf"><a href="/css/kak-polzovatsya-spravochnikom">Как пользоваться справочником</a></li>
+              <li class="leaf"><a href="/css/%21important" title="">!important</a></li>
+              <li class="leaf"><a href="/css/-moz-border-bottom-colors">-moz-border-bottom-colors</a></li>
+              <li class="leaf"><a href="/css/-moz-border-left-colors">-moz-border-left-colors</a></li>
+              <li class="leaf"><a href="/css/-moz-border-right-colors">-moz-border-right-colors</a></li>
+              <li class="leaf"><a href="/css/-moz-border-top-colors">-moz-border-top-colors</a></li>
+              <li class="leaf"><a href="/css/-moz-linear-gradient">-moz-linear-gradient</a></li>
+              <li class="leaf"><a href="/css/-moz-orient">-moz-orient</a></li>
+              <li class="leaf"><a href="/css/-moz-radial-gradient">-moz-radial-gradient</a></li>
+              <li class="leaf"><a href="/css/-moz-user-select" title="">-moz-user-select</a></li>
+              <li class="leaf"><a href="/css/-ms-interpolation-mode">-ms-interpolation-mode</a></li>
             </ul>		
 		  </div>
 	    </div>
@@ -101,4 +117,4 @@
 		  </aside>
 				
 		<div class="content">	
-			
+			<?php }} ?>

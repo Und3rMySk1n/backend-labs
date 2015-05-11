@@ -1,4 +1,5 @@
-body {
+body 
+{
 	margin: 0;
 	font: 0.92em/1.4 Arial, sans-serif;
 	min-width: 780px;
@@ -23,7 +24,7 @@ a img
     border: none; 
 }
 
-/* Header */
+/* ================= Header ==================== */
 
 header 
 {
@@ -159,7 +160,201 @@ header
 	padding: 2px 2px;
 }
 
-.find {
+.find 
+{
 	vertical-align: -3px;
 	padding-right: 2px;
+    opacity: 0.5; 
+}
+
+/* ======================== левое меню =========================== */
+.layout 
+{
+	overflow: hidden;
+	padding-bottom: 0;
+	background: url(../img/bg.png) repeat-y;
+	background: -moz-linear-gradient(left, #4b4a45, #4b4a45 210px, #fff 211px, #fff);
+	background: -webkit-linear-gradient(left, #4b4a45, #4b4a45 210px, #fff 211px, #fff);
+	background: -o-linear-gradient(left, #4b4a45, #4b4a45 210px, #fff 211px, #fff);
+	background: -ms-linear-gradient(left, #4b4a45, #4b4a45 210px, #fff 211px, #fff);
+	background: linear-gradient(to right, #4b4a45, #4b4a45 210px, #fff 211px, #fff);
+}
+
+aside 
+{
+	background: #4b4a45;
+	width: 210px;
+	float: left;
+	margin-right: 40px;
+}
+
+aside a 
+{	
+	color: #EEDFAC; 
+	text-decoration: none; 
+	display: block;
+	line-height: 1.2;
+	margin: 3px 0;
+}
+
+aside a:visited 
+{ 
+    color: #ccc; 
+}
+
+aside a:hover 
+{ 
+    color: #fff; 
+}
+
+aside a.active 
+{
+	color: #fff;
+	padding: 2px 0;
+}
+
+aside .block 
+{
+	margin: 10px 0 15px;
+}
+
+aside .block_content 
+{
+	padding: 0 5px;
+	outline: none;
+}
+
+#filter 
+{
+	background: #fff;
+	width: 198px;
+	border: 1px solid #666;
+}
+
+#left_search_field 
+{
+    -webkit-appearance: none;
+	outline: none;
+	border: none;
+	padding: 2px 2px;
+	background: #fff;
+	width: 173px;
+	font-size: 14px;
+}
+
+aside .menu
+{
+	padding: 0 0 0.25em 20px;
+	margin: 0;
+	font-size: 14px;
+}
+
+#menu-menu-css .block_content,
+#menu-menu-html .block_content 
+{
+	height: 349px;
+	width: 200px;
+	overflow: auto;
+}
+
+#menu-menu-html .block_content 
+{ 
+    height: 348px; 
+}
+
+li.collapsed 
+{
+	list-style: none;
+	background: url(../images/bullet2.png) 0 6px no-repeat;
+	padding: 0 5px 0 15px;
+	margin-left: -10px;
+}
+
+li.leaf
+{
+	list-style: none;
+	background: url(../images/bullet.png) 0 6px no-repeat;
+	margin-left: -10px;
+	padding: 0 0 0 15px;
+}
+
+aside .block_title 
+{
+	background: #DAD7C5;
+	color: rgba(75,74,69,0.8);
+	text-shadow: 1px 2px 3px #DAD7C5, 0 0 0 #000, 1px 2px 3px #DAD7C5;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0 -6px 10px 0;
+	padding: 5px 6px 4px 5px;
+	position: relative;
+}
+
+aside .block_title:after 
+{
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	right: 0;
+	bottom: -6px;
+	border-width: 3px;
+	border: solid transparent;
+	border-top-color: #959A8F;
+	border-left-color: #959A8F;
+}
+
+/* ========================== Контент ======================= */
+.content
+{
+    float: left;
+}
+
+/* ===================== footer =================== */
+footer 
+{
+    padding: 0 15px 10px;
+    border-top: 2px solid #ccc;
+    font-size: 0.9em;
+    clear: both;
+	display: block;
+	background: #eee;
+	background: -moz-linear-gradient(top, #eee 0%, #fff 100%);
+	background: -webkit-linear-gradient(top, #eee 0%, #fff 100%);
+	background: -o-linear-gradient(top, #eee 0%, #fff 100%);
+	background: -ms-linear-gradient(top, #eee 0%, #fff 100%);
+	background: linear-gradient(to bottom, #eee 0%, #fff 100%);
+}
+
+footer section 
+{
+    width: 190px;
+    float: left;
+	margin: 15px 0;
+}
+
+footer h4 
+{
+    font-size: 1em;
+    margin: 0;
+}
+
+footer section p 
+{
+    margin: 3px 0 4px 15px;
+}
+
+footer a, footer a:visited 
+{ 
+    color: #666; 
+}
+
+footer a:hover 
+{ 
+    color: #BD2026; 
+}
+
+.copyright 
+{
+	clear: left;
 }

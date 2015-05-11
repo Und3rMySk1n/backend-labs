@@ -7,4 +7,5 @@
     $vars = array(
             'students' => $students
         );
+		
     echo BuildPage('students.tpl', $vars);
