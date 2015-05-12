@@ -1,0 +1,33 @@
+1. CREATE DATABASE rental;
+
+2. CREATE TABLE dvd 
+   (dvd_id INT(11) UNSIGNED AUTO_INCREMENT,
+   title VARCHAR(255),
+   production_year YEAR,
+   PRIMARY KEY(dvd_id));
+   
+   CREATE TABLE customer 
+   (customer_id INT(11) UNSIGNED AUTO_INCREMENT,
+   first_name VARCHAR(255),
+   last_name VARCHAR(255),
+   passport_code VARCHAR(12),
+   registration_date DATE,
+   PRIMARY KEY(customer_id));
+   
+   CREATE TABLE offer 
+   (offer_id INT(11) UNSIGNED AUTO_INCREMENT,
+   dvd_id INT(11) UNSIGNED,
+   customer_id INT(11) UNSIGNED,
+   offer_date DATE,
+   return_date DATE,
+   PRIMARY KEY(offer_id));
+   
+3. INSERT INTO dvd 
+   (title, production_year)
+   VALUES
+   (Avengers, 2012),
+   (Kon Tiki, 2014),
+   (Predator, 1986),
+   (Mulholland drive, 1990);
+   
+   
