@@ -38,4 +38,10 @@
    ('Gena', 'Bukin',  '76 06 467823', 2014-12-11),
    ('Stepan', 'Lyskov',  '82 12 114358', 2011-29-08);
    
+   INSERT INTO customer 
+   (dvd_id, customer_id, offer_date, return_date)
+   VALUES
+   (1, 3, 2015-10-01, 2015-10-02),
+   (3, 1, 2015-29-01, 2015-29-02);
+   
    
