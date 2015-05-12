@@ -25,9 +25,17 @@
 3. INSERT INTO dvd 
    (title, production_year)
    VALUES
-   (Avengers, 2012),
-   (Kon Tiki, 2014),
-   (Predator, 1986),
-   (Mulholland drive, 1990);
+   ('Avengers', 2012),
+   ('Kon Tiki', 2014),
+   ('Predator', 1986),
+   ('Mulholland drive', 1990);
+   
+   INSERT INTO customer 
+   (first_name, last_name, passport_code, registration_date)
+   VALUES
+   ('Ivan', 'Semenov',  '88 01 123456', 2010-21-05),
+   ('Chuck', 'Norris',  '68 01 127776', 2012-07-01),
+   ('Gena', 'Bukin',  '76 06 467823', 2014-12-11),
+   ('Stepan', 'Lyskov',  '82 12 114358', 2011-29-08);
    
    
