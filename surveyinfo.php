@@ -1,6 +1,21 @@
 <?php
 	require_once('include/common.inc.php');
 
-	$SurveyName = GetSurveyName();
-	$Survey = GetSurveyFromFile($SurveyName);		
-	PrintSurvey($Survey);		
+	$errorCode = ERR_OK;
+	$SurveyName = GetSurveyName($errorCode);
+	if ($SurveyName != false)
+	{
+	    $Survey = GetSurveyFromFile($SurveyName, $errorCode);
+        if ($Survey != false)
+        {		
+            PrintSurvey($Survey);
+        }
+        else
+        {		
+	        PrintError($errorCode);		
+		}
+	}
+	else
+	{
+	    PrintError($errorCode);
+	}
