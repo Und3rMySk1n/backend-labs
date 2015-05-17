@@ -3,8 +3,7 @@
 	
     $vars = array
 	    (
-		    'title' => "Добро пожаловать!",
-			'description' => "Это страница для лабораторной работы #03."			
+		    'title' => "Тег &lt;canvas&gt;",						
 		);
 	
-    echo BuildPage('htmlbook.tpl', $vars);
+    echo BuildPage('canvas.tpl', $vars);
