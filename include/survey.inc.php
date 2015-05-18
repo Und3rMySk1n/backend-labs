@@ -9,8 +9,7 @@
 	    ERR_NO_LASTNAME => 'Не задана фамилия. <br>',
 	    ERR_NO_EMAIL => 'Не задан e-mail. <br>',
 	    ERR_NO_AGE => 'Не задан возраст. <br>',
-            ERR_NO_FILE => 'Такого файла не существует. <br>', 
-	    ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
+            ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
 	    ERR_UNABLE_TO_PARSE => 'Неправильный формат файла. <br>',		    
             ERR_NO_FILE => 'Такого файла не существует. <br>', 
 	    ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
@@ -19,12 +18,7 @@
         );
 		
 	echo $errMessages[$errorCode];    
-    }
-	
-    function GetParam($paramName)
-    {         
-        return ((isset($_GET[$paramName]))&&(!empty($_GET[$paramName]))) ? $_GET[$paramName] : '';			
-    }
+    }       
     	
     function GetSurveyFromRequest(&$errorCode)
     {
@@ -70,7 +64,7 @@
                         
     function GetSurveyFilePath($email)
     {	
-        $filePath = 'data/'.$email.'.txt';
+        $filePath = 'data/' . $email . '.txt';
 	return $filePath;
     }		
 		
@@ -83,16 +77,33 @@
         {
             $errorCode = ERR_FILE_NOT_WRITTEN;
         }	    
-	
-        fclose($newfile);			    
+	else
+        {
+            fclose($newfile);			    
+        }
     }    		
 	
-    function ReadSurveyFile($filePath)
+    function ReadSurveyFile($filePath, &$errorCode)
     {
         $newfile = fopen($filePath, r);
-        $lenght = filesize($filePath);
-        $rd = fread($newfile, $lenght);			
-	return $rd;
+        if ($newfile == false)
+        {
+            errorCode ==  ERR_NO_ACCESS_TO_FILE;
+        }
+        else
+        {
+            $lenght = filesize($filePath);
+            $rd = fread($newfile, $lenght);
+            if ($rd == false)
+            {
+                errorCode == ERR_NO_FILE;
+                return false;
+            }
+            else
+            {			
+	        return $rd; 
+            }
+        }
     }
 	
     function GetSurveyName(&$errorCode)
@@ -121,7 +132,7 @@
 		
 	if ($errorCode == ERR_OK)
 	{
-	    $survey = ReadSurveyFile($filePath);
+	    $survey = ReadSurveyFile($filePath, $errorCode);
 	    if ($survey == false)
             {
                 $errorCode = ERR_NO_ACCESS_TO_FILE;
