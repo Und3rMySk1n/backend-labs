@@ -2,7 +2,7 @@
 
     function PrintError($errorCode)
     {
-        $ErrMessages = array //расшифровка ошибок записи
+        $errMessages = array //расшифровка ошибок записи
         (
 	    ERR_NO_SURVEY => 'Анкета не задана, либо она пустая. <br>', 
 	    ERR_NO_FIRSTNAME => 'Не задано имя. <br>',
@@ -18,21 +18,17 @@
 	    ERR_FILE_NOT_WRITTEN => 'Не удалось записать файл. <br>'
         );
 		
-	echo $ErrMessages[$errorCode];    
+	echo $errMessages[$errorCode];    
     }
 	
     function GetParam($paramName)
-    {
+    {         
         return ((isset($_GET[$paramName]))&&(!empty($_GET[$paramName]))) ? $_GET[$paramName] : '';			
     }
     	
     function GetSurveyFromRequest(&$errorCode)
     {
-        if ((!isset($_GET)) || (empty($_GET)))
-	{				   
-	    $errorCode = ERR_NO_SURVEY;
-	}
-			
+        			
 	if ($errorCode === ERR_OK)
         {			    
             $result[first_name] = GetParam('first_name');
@@ -74,14 +70,14 @@
                         
     function GetSurveyFilePath($email)
     {	
-        $FilePath = 'data/'.$email.'.txt';
-	return $FilePath;
+        $filePath = 'data/'.$email.'.txt';
+	return $filePath;
     }		
 		
     function SaveSurveyToFile($userInfo, &$errorCode)
     {
-        $SurveyFilePath = GetSurveyFilePath($userInfo['email']);
-        $newfile = fopen($SurveyFilePath, w);						
+        $surveyFilePath = GetSurveyFilePath($userInfo['email']);
+        $newfile = fopen($surveyFilePath, 'w');						
         $wrt = fwrite($newfile, serialize($userInfo));
         if ($wrt == false)
         {
@@ -101,21 +97,22 @@
 	
     function GetSurveyName(&$errorCode)
     {
-        if ((isset($_GET['email'])) && (!empty($_GET['email'])))
-        {
-	    return $_GET['email'];
-	}
-	else
+        $email = GetParam('email');
+	if (!empty($email)) 
+	{
+            return $email;
+        }
+        else 
         {
 	    $errorCode = ERR_NO_EMAIL;
 	    return false;
         }				
     }
 
-    function GetSurveyFromFile($SurveyName, &$errorCode)
+    function GetSurveyFromFile($surveyName, &$errorCode)
     {        
-        $filePath = GetSurveyFilePath($SurveyName);				
-        $Survey = array();
+        $filePath = GetSurveyFilePath($surveyName);				
+        $survey = array();
 
 	if (!file_exists($filePath))
         {
@@ -124,8 +121,8 @@
 		
 	if ($errorCode == ERR_OK)
 	{
-	    $Survey = ReadSurveyFile($filePath);
-	    if ($Survey == false)
+	    $survey = ReadSurveyFile($filePath);
+	    if ($survey == false)
             {
                 $errorCode = ERR_NO_ACCESS_TO_FILE;
             }						
@@ -133,20 +130,20 @@
             
         if ($errorCode == ERR_OK)
         {
-            $Survey = unserialize($Survey);
-     	    if ($Survey == false)
+            $survey = unserialize($survey);
+     	    if ($survey == false)
             {
                 $errorCode = ERR_UNABLE_TO_PARSE;
             }
         }		      				
         
-    return ($errorCode == ERR_OK) ? $Survey : false;				
+        return ($errorCode == ERR_OK) ? $survey : false;				
     }
 
-    function PrintSurvey($Survey)
+    function PrintSurvey($survey)
     {
-        echo '<b>First Name:</b> '.$Survey['first_name'].'<br>';
-	echo '<b>Last Name:</b> '.$Survey['last_name'].'<br>';
-	echo '<b>Email:</b> '.$Survey['email'].'<br>';
-	echo '<b>Age:</b> '.$Survey['age'].'<br>';	
+        echo '<b>First Name:</b> ' . $survey['first_name'] . '<br>';
+	echo '<b>Last Name:</b> ' . $survey['last_name'] . '<br>';
+	echo '<b>Email:</b> ' . $survey['email'] . '<br>';
+	echo '<b>Age:</b> ' . $survey['age'] . '<br>';	
     }

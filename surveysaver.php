@@ -8,7 +8,8 @@
         SaveSurveyToFile($userInfo, $errorCode);
         if ($errorCode == ERR_OK)
         {
-            echo 'Файл '.$userInfo['email'].'.txt успешно записан.';
+            $surveyName = GetSurveyName($errorCode);            
+            echo 'Файл ' . $surveyName . ' успешно записан.';
         }
         else
         {

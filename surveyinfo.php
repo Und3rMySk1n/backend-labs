@@ -2,13 +2,13 @@
     require_once('include/common.inc.php');
 
     $errorCode = ERR_OK;
-    $SurveyName = GetSurveyName($errorCode);
-    if ($SurveyName != false)
+    $surveyName = GetSurveyName($errorCode);
+    if ($surveyName != false)
     {
-        $Survey = GetSurveyFromFile($SurveyName, $errorCode);
-        if ($Survey != false)
+        $survey = GetSurveyFromFile($surveyName, $errorCode);
+        if ($survey != false)
         {		
-            PrintSurvey($Survey);
+            PrintSurvey($survey);
         }
         else
         {		
