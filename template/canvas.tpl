@@ -1,12 +1,12 @@
       <div id="content" class="three-col">
-	    <h1 class="title">{$title}</h1>
-	    <div id="like">
-		  <div class="num_comments">
-		    <a href="#">
-		      комментариев: 38
-		    </a>
-		  </div>		
-	    </div> <!-- /like -->					
+        <h1 class="title">{$title}</h1>
+	<div id="like">
+	  <div class="num_comments">
+	    <a href="#">
+	      комментариев: 38
+	    </a>
+	  </div>		
+        </div> <!-- /like -->					
 		<div id="system-main" class="block">
 		  <div class="block_content ">
 		    <article>

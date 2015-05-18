@@ -1,9 +1,8 @@
 <?php
-	require_once('include/common.inc.php');
-    
-	
-	$errorCode = ERR_OK;
-	$userInfo = GetSurveyFromRequest($errorCode);	
+    require_once('include/common.inc.php');    
+
+    $errorCode = ERR_OK;
+    $userInfo = GetSurveyFromRequest($errorCode);	
     if ($userInfo !== false)
     {
         SaveSurveyToFile($userInfo, $errorCode);

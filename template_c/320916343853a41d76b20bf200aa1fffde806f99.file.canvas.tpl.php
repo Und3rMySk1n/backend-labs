@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-17 21:20:45
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-18 22:06:18
          compiled from "Z:\home\repo1\www\template\canvas.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:114445558a8beaf7567-86586463%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '320916343853a41d76b20bf200aa1fffde806f99' => 
     array (
       0 => 'Z:\\home\\repo1\\www\\template\\canvas.tpl',
-      1 => 1431883243,
+      1 => 1431883290,
       2 => 'file',
     ),
   ),
@@ -98,14 +98,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     <p> Обязателен.</p>
                     <p class="exampleTitle">Пример</p>
                     <p class="example-support">
-					  <span class="html yes">HTML5</span><span class="no">IE 8</span><span class="yes">IE 9</span><span class="yes">Cr</span><span class="yes">Op</span><span class="yes">Sa</span><span class="yes">Fx</span></p>
-
-                    <!-- Тут будет пример -->
+					  <span class="html yes">HTML5</span><span class="no">IE 8</span><span class="yes">IE 9</span><span class="yes">Cr</span><span class="yes">Op</span><span class="yes">Sa</span><span class="yes">Fx</span></p>                   
 					
 					<pre><code><?php echo $_smarty_tpl->getSubTemplate ('example_canvas.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-</code></pre>
+</code></pre>					
 					
-					<!-- Пример закончился -->
                     <div class="example-view">
 					  <img src="template/images/win.gif" title="Посмотреть в этом окне" alt="Посмотреть пример" class="example-win"><br />
 					  <img src="template/images/win2.gif" title="Посмотреть в новом окне" alt="Посмотреть пример" class="example-win"><br />
