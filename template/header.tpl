@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML-справочник</title>
+    <title>HTML-СЃРїСЂР°РІРѕС‡РЅРёРє</title>
     <link rel="stylesheet" href="template/css/style.css" media="all">
   </head>
   <body>
     <header>
       <a href="#"><img src="template/images/logo.png" alt="htmlbook" class="logo"></a>
-	  
+
       <nav>
         <ul id="topmenu">
-	  <li class="show"><a href="#"><i class="icon icon-main"></i><br>Основное</a></li>
-	  <li class="hide"><a href="#"><i class="icon icon-html"></i><br>HTML</a></li>
-	  <li class="hide"><a href="#"><i class="icon icon-css"></i><br>CSS</a></li>
-	  <li class="hide"><a href="#"><i class="icon icon-site"></i><br>Сайт</a></li>
-	</ul>
+          <li class="show">
+            <a href="#"><i class="icon icon-main"></i><br>РћСЃРЅРѕРІРЅРѕРµ</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-html"></i><br>HTML</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-css"></i><br>CSS</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-site"></i><br>РЎР°Р№С‚</a>
+          </li>
+        </ul>
 
-	<div id="main" class="tile show">
-	  <ul>
-	    <li><a href="#" >Статьи</a></li>
-    	    <li><a href="#" >Блог</a></li>
-	    <li><a href="#" >Практикум</a></li>
-	    <li><a href="#" >Тесты</a></li>
-	    <li><a href="#">Форум</a></li>
-	  </ul>
-	</div>			
+        <div id="main" class="tile show">
+          <ul>
+            <li>
+              <a href="#">РЎС‚Р°С‚СЊРё</a>
+            </li>
+            <li>
+              <a href="#">Р‘Р»РѕРі</a>
+            </li>
+            <li>
+              <a href="#">РџСЂР°РєС‚РёРєСѓРј</a>
+            </li>
+            <li>
+              <a href="#">РўРµСЃС‚С‹</a>
+            </li>
+            <li>
+              <a href="#">Р¤РѕСЂСѓРј</a>
+            </li>
+          </ul>
+        </div>
       </nav>
-			
-			
+
+
       <form id="search-box">
-        <input type="text" id="search_field" placeholder="Поиск по сайту">
-	<input type="image" src="template/images/find.png" alt="Найти" class="find">
+        <input type="text" id="search_field" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ">
+        <input type="image" src="template/images/find.png" alt="РќР°Р№С‚Рё" class="find">
       </form>
     </header>	

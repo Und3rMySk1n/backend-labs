@@ -1,106 +1,116 @@
-      <div id="content" class="three-col">
-        <h1 class="title">{$title}</h1>
-	<div id="like">
-	  <div class="num_comments">
-	    <a href="#">
-	      комментариев: 38
-	    </a>
-	  </div>		
-        </div> <!-- /like -->					
-		<div id="system-main" class="block">
-		  <div class="block_content ">
-		    <article>
-              <div class="field field-name-body field-type-text-with-summary field-label-hidden">
-			    <div class="field-items">
-				  <div class="field-item even">
-				    <table class="data browser">
-                      <tr class="br">
-                        <td><span class="ie">Internet Explorer</span></td>
-                        <td><span class="cr">Chrome</span></td>
-                        <td><span class="op">Opera</span></td>
-                        <td><span class="sa">Safari</span></td>
-                        <td><span class="fx">Firefox</span></td>
-                        <td><span class="an">Android</span></td>
-                        <td><span class="ip">iOS</span></td>
-                      </tr>
-                      <tr class="sp">
-                        <td class="yes"><span>9.0+</span></td>
-                        <td class="yes"><span>6.0+</span></td>
-                        <td class="yes"><span>9.6+</span></td>
-                        <td class="yes"><span>3.1+</span></td>
-                        <td class="yes"><span>4.0+</span></td>
-                        <td class="yes"><span>2.1+</span></td>
-                        <td class="yes"><span>3.0+</span></td>
-                      </tr>
-                    </table>
+<div id="content" class="three-col">
+  <h1 class="title">{$title}</h1>
+  <div id="like">
+    <div class="num_comments">
+      <a href="#">
+        РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ: 38
+      </a>
+    </div>
+  </div>
+  <!-- /like -->
+  <div id="system-main" class="block">
+    <div class="block_content ">
+      <article>
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+          <div class="field-items">
+            <div class="field-item even">
+              <table class="data browser">
+                <tr class="br">
+                  <td><span class="ie">Internet Explorer</span></td>
+                  <td><span class="cr">Chrome</span></td>
+                  <td><span class="op">Opera</span></td>
+                  <td><span class="sa">Safari</span></td>
+                  <td><span class="fx">Firefox</span></td>
+                  <td><span class="an">Android</span></td>
+                  <td><span class="ip">iOS</span></td>
+                </tr>
+                <tr class="sp">
+                  <td class="yes"><span>9.0+</span></td>
+                  <td class="yes"><span>6.0+</span></td>
+                  <td class="yes"><span>9.6+</span></td>
+                  <td class="yes"><span>3.1+</span></td>
+                  <td class="yes"><span>4.0+</span></td>
+                  <td class="yes"><span>2.1+</span></td>
+                  <td class="yes"><span>3.0+</span></td>
+                </tr>
+              </table>
 
-                    <h3>Спецификация</h3>
-                    <table class="standart">
-                      <tr>
-                        <td class="h">HTML:</td>
-                        <td class="no">3.2</td>
-                        <td class="no">4.01</td>
-                        <td class="yes">5.0</td>
-                        <td class="xh">XHTML:</td>
-                        <td class="no">1.0</td>
-                        <td class="no">1.1</td>
-                      </tr>
-                    </table>
-					
-                    <h3>Описание</h3>
-                      <p>
-					    Создает область, в которой при помощи JavaScript можно  рисовать разные объекты, выводить изображения, трансформировать их и менять  свойства. При помощи тега <span class="tag">&lt;canvas&gt;</span> можно создавать рисунки, анимацию,  игры и др.  
-					  </p>
-                    
-					<h3>Синтаксис</h3>
+              <h3>РЎРїРµС†РёС„РёРєР°С†РёСЏ</h3>
+              <table class="standart">
+                <tr>
+                  <td class="h">HTML:</td>
+                  <td class="no">3.2</td>
+                  <td class="no">4.01</td>
+                  <td class="yes">5.0</td>
+                  <td class="xh">XHTML:</td>
+                  <td class="no">1.0</td>
+                  <td class="no">1.1</td>
+                </tr>
+              </table>
 
-                    <pre><code class="no-buttons"><span class="tag">&lt;canvas <span class="attribute">id=</span><span class="value">&quot;идентификатор&quot;</span>&gt;<br />&lt;/canvas&gt;</span></code></pre>
-					
-                    <h3>Атрибуты</h3>
-                    <dl class="param">
-                      <dt>height</dt>
-                        <dd>Задает высоту холста. По умолчанию 300 пикселов.</dd>
-                      <dt>width</dt>
-                        <dd>Задает ширину холста. По умолчанию 150 пикселов.</dd>
-                    </dl>
+              <h3>РћРїРёСЃР°РЅРёРµ</h3>
+              <p>
+                РЎРѕР·РґР°РµС‚ РѕР±Р»Р°СЃС‚СЊ, РІ РєРѕС‚РѕСЂРѕР№ РїСЂРё РїРѕРјРѕС‰Рё JavaScript РјРѕР¶РЅРѕ СЂРёСЃРѕРІР°С‚СЊ СЂР°Р·РЅС‹Рµ РѕР±СЉРµРєС‚С‹, РІС‹РІРѕРґРёС‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ,
+                С‚СЂР°РЅСЃС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РёС… Рё РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІР°. РџСЂРё РїРѕРјРѕС‰Рё С‚РµРіР° <span class="tag">&lt;canvas&gt;</span> РјРѕР¶РЅРѕ
+                СЃРѕР·РґР°РІР°С‚СЊ СЂРёСЃСѓРЅРєРё, Р°РЅРёРјР°С†РёСЋ, РёРіСЂС‹ Рё РґСЂ.
+              </p>
 
-                    <p class="more">
-					  Также для этого тега доступны <a href="#">универсальные атрибуты</a> и <a href="#">события</a>.
-					</p>
-					
-                    <h3>Закрывающий тег</h3>
-                    <p> Обязателен.</p>
-                    <p class="exampleTitle">Пример</p>
-                    <p class="example-support">
-					  <span class="html yes">HTML5</span><span class="no">IE 8</span><span class="yes">IE 9</span><span class="yes">Cr</span><span class="yes">Op</span><span class="yes">Sa</span><span class="yes">Fx</span></p>                   
-					
-					<pre><code>{include file='example_canvas.tpl'}</code></pre>					
-					
-                    <div class="example-view">
-					  <img src="template/images/win.gif" title="Посмотреть в этом окне" alt="Посмотреть пример" class="example-win"><br />
-					  <img src="template/images/win2.gif" title="Посмотреть в новом окне" alt="Посмотреть пример" class="example-win"><br />
-					</div>
-                    <p>Результат примера в браузере Opera показан на рис.&nbsp;1.</p>
-                    <p class="fig">
-					  <img src="template/images/tag_canvas.png" alt="Вывод рисунка с помощью тега &lt;canvas&gt;" width="400" height="299" />
-					</p>
-                    <p class="figsign">Рис. 1. Вывод рисунка с помощью тега &lt;canvas&gt;</p>
-                  </div> <!-- Field-item -->
-                </div>
-			  </div>
-			  
-			  <div class="field field-name-taxonomy-vocabulary-10 field-type-taxonomy-term-reference field-label-hidden">
-			    <div class="field-items">
-				  <div class="field-item even">
-				    <a href="/html/type/html5">HTML5</a>
-				  </div>
-				  <div class="field-item odd">
-				    <a href="/html/type/img">Изображения</a>
-				  </div>
-				</div>
-			  </div>
-            </article>		
-		  </div> <!-- Block-content -->
-	    </div> <!-- System-main -->
-      </div> <!-- /Content -->
-    </div> <!-- /layout -->
+              <h3>РЎРёРЅС‚Р°РєСЃРёСЃ</h3>
+
+              <pre><code class="no-buttons"><span class="tag">&lt;canvas <span class="attribute">id=</span><span class="value">&quot;РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ&quot;</span>&gt;<br/>&lt;/canvas&gt;</span></code></pre>
+
+              <h3>РђС‚СЂРёР±СѓС‚С‹</h3>
+              <dl class="param">
+                <dt>height</dt>
+                <dd>Р—Р°РґР°РµС‚ РІС‹СЃРѕС‚Сѓ С…РѕР»СЃС‚Р°. РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 300 РїРёРєСЃРµР»РѕРІ.</dd>
+                <dt>width</dt>
+                <dd>Р—Р°РґР°РµС‚ С€РёСЂРёРЅСѓ С…РѕР»СЃС‚Р°. РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 150 РїРёРєСЃРµР»РѕРІ.</dd>
+              </dl>
+
+              <p class="more">
+                РўР°РєР¶Рµ РґР»СЏ СЌС‚РѕРіРѕ С‚РµРіР° РґРѕСЃС‚СѓРїРЅС‹
+                <a href="#">СѓРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Рµ Р°С‚СЂРёР±СѓС‚С‹</a>
+                Рё
+                <a href="#">СЃРѕР±С‹С‚РёСЏ</a>
+                .
+              </p>
+
+              <h3>Р—Р°РєСЂС‹РІР°СЋС‰РёР№ С‚РµРі</h3>
+              <p> РћР±СЏР·Р°С‚РµР»РµРЅ.</p>
+              <p class="exampleTitle">РџСЂРёРјРµСЂ</p>
+              <p class="example-support">
+                <span class="html yes">HTML5</span><span class="no">IE 8</span><span class="yes">IE 9</span><span class="yes">Cr</span><span class="yes">Op</span><span class="yes">Sa</span><span class="yes">Fx</span>
+              </p>
+
+              <pre><code>{include file='example_canvas.tpl'}</code></pre>
+
+              <div class="example-view">
+                <img src="template/images/win.gif" title="РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІ СЌС‚РѕРј РѕРєРЅРµ" alt="РџРѕСЃРјРѕС‚СЂРµС‚СЊ РїСЂРёРјРµСЂ" class="example-win"><br/>
+                <img src="template/images/win2.gif" title="РџРѕСЃРјРѕС‚СЂРµС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ" alt="РџРѕСЃРјРѕС‚СЂРµС‚СЊ РїСЂРёРјРµСЂ" class="example-win"><br/>
+              </div>
+              <p>Р РµР·СѓР»СЊС‚Р°С‚ РїСЂРёРјРµСЂР° РІ Р±СЂР°СѓР·РµСЂРµ Opera РїРѕРєР°Р·Р°РЅ РЅР° СЂРёСЃ.&nbsp;1.</p>
+              <p class="fig">
+                <img src="template/images/tag_canvas.png" alt="Р’С‹РІРѕРґ СЂРёСЃСѓРЅРєР° СЃ РїРѕРјРѕС‰СЊСЋ С‚РµРіР° &lt;canvas&gt;" width="400" height="299"/>
+              </p>
+              <p class="figsign">Р РёСЃ. 1. Р’С‹РІРѕРґ СЂРёСЃСѓРЅРєР° СЃ РїРѕРјРѕС‰СЊСЋ С‚РµРіР° &lt;canvas&gt;</p>
+            </div>
+            <!-- Field-item -->
+          </div>
+        </div>
+
+        <div class="field field-name-taxonomy-vocabulary-10 field-type-taxonomy-term-reference field-label-hidden">
+          <div class="field-items">
+            <div class="field-item even">
+              <a href="/html/type/html5">HTML5</a>
+            </div>
+            <div class="field-item odd">
+              <a href="/html/type/img">РР·РѕР±СЂР°Р¶РµРЅРёСЏ</a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- Block-content -->
+  </div>
+  <!-- System-main -->
+</div> <!-- /Content --></div> <!-- /layout -->

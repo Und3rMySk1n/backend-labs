@@ -1,4 +1,5 @@
 <?php
+
     function GetView($template, $vars)
     {
         $smarty = new Smarty();
@@ -11,7 +12,7 @@
     function BuildPage($template, $vars)
     {
         $header = GetView('header.tpl', $vars);
-	$aside = GetView('aside.tpl', $vars);
+        $aside = GetView('aside.tpl', $vars);
         $content = GetView($template, $vars);
         $footer = GetView('footer.tpl', $vars);
         return $header . $aside . $content . $footer;

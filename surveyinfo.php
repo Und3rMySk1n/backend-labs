@@ -7,13 +7,13 @@
     {
         $survey = GetSurveyFromFile($surveyName, $errorCode);
         if ($survey != false)
-        {		
+        {
             PrintSurvey($survey);
         }
         else
-        {		
-	    PrintError($errorCode);		
-	}
+        {
+            PrintError($errorCode);
+        }
     }
     else
     {
