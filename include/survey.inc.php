@@ -7,7 +7,7 @@
     define('ERR_NO_AGE', 5);
     define('ERR_NO_ACCESS_TO_FILE', 6);
     define('ERR_UNABLE_TO_PARSE', 7);
-    define('ERR_NO_FILE', 8);
+    define('ERR_NOT_READ', 8);
     define('ERR_FILE_NOT_WRITTEN', 9);
     define('first_name', 10);
     define('last_name', 11);
@@ -25,7 +25,7 @@
             ERR_NO_AGE => 'Не задан возраст. <br>',
             ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
             ERR_UNABLE_TO_PARSE => 'Неправильный формат файла. <br>',
-            ERR_NO_FILE => 'Такого файла не существует. <br>',           
+            ERR_NOT_READ => 'Файл не был прочитан. <br>',           
             ERR_FILE_NOT_WRITTEN => 'Не удалось записать файл. <br>'
         );
 
@@ -94,21 +94,28 @@
     {
         $surveyFilePath = GetSurveyFilePath($userInfo[email]);
         $newfile = fopen($surveyFilePath, 'w');
-        $wrt = fwrite($newfile, serialize($userInfo));
-        if ($wrt == false)
+        if ($newfile === false)
         {
-            $errorCode = ERR_FILE_NOT_WRITTEN;
+            $errorCode = ERR_NO_ACCESS_TO_FILE;
         }
         else
         {
-            fclose($newfile);
+            $wrt = fwrite($newfile, serialize($userInfo));
+            if ($wrt === false)
+            {
+                $errorCode = ERR_FILE_NOT_WRITTEN;
+            }
+            else
+            {
+                fclose($newfile);
+            }
         }
     }
 
     function ReadSurveyFile($filePath, &$errorCode)
     {
         $newfile = fopen($filePath, 'r');
-        if ($newfile == false)
+        if ($newfile === false)
         {
             $errorCode = ERR_NO_ACCESS_TO_FILE;
         }
@@ -116,10 +123,11 @@
         {
             $lenght = filesize($filePath);
             $rd = fread($newfile, $lenght);
-            if ($rd == false)
+            if ($rd === false)
             {
-                $errorCode = ERR_NO_FILE;
-            }
+                $errorCode = ERR_NOT_READ;
+            }            
+            fclose($newfile);            
         }
 
         return ($errorCode == ERR_OK) ? $rd : false;
