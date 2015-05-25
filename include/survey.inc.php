@@ -105,10 +105,7 @@
             {
                 $errorCode = ERR_FILE_NOT_WRITTEN;
             }
-            else
-            {
-                fclose($newfile);
-            }
+            fclose($newfile);            
         }
     }
 
