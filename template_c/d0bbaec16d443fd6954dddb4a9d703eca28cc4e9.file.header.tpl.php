@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-13 22:47:27
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-25 22:18:55
          compiled from "Z:\home\repo1\www\template\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:281015550cf05578c51-60191517%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd0bbaec16d443fd6954dddb4a9d703eca28cc4e9' => 
     array (
       0 => 'Z:\\home\\repo1\\www\\template\\header.tpl',
-      1 => 1431542718,
+      1 => 1432577932,
       2 => 'file',
     ),
   ),
@@ -23,34 +23,52 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html>
   <head>
     <title>HTML-справочник</title>
-	<link rel="stylesheet" href="template/css/style.css" media="all">
+    <link rel="stylesheet" href="template/css/style.css" media="all">
   </head>
   <body>
     <header>
-	  <a href="#"><img src="template/images/logo.png" alt="htmlbook" class="logo"></a>
-	  
-	  <nav>
-	    <ul id="topmenu">
-		  <li class="show"><a href="#"><i class="icon icon-main"></i><br>Основное</a></li>
-		  <li class="hide"><a href="#"><i class="icon icon-html"></i><br>HTML</a></li>
-		  <li class="hide"><a href="#"><i class="icon icon-css"></i><br>CSS</a></li>
-		  <li class="hide"><a href="#"><i class="icon icon-site"></i><br>Сайт</a></li>
-		</ul>
+      <a href="#"><img src="template/images/logo.png" alt="htmlbook" class="logo"></a>
 
-		<div id="main" class="tile show">
-		  <ul>
-		    <li><a href="#" >Статьи</a></li>
-			<li><a href="#" >Блог</a></li>
-			<li><a href="#" >Практикум</a></li>
-			<li><a href="#" >Тесты</a></li>
-			<li><a href="#">Форум</a></li>
-		  </ul>
-		</div>			
-	  </nav>
-			
-			
-	  <form id="search-box">
-	    <input type="text" id="search_field" placeholder="Поиск по сайту">
-		<input type="image" src="template/images/find.png" alt="Найти" class="find">
-	  </form>
-	</header>	<?php }} ?>
+      <nav>
+        <ul id="topmenu">
+          <li class="show">
+            <a href="#"><i class="icon icon-main"></i><br>Основное</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-html"></i><br>HTML</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-css"></i><br>CSS</a>
+          </li>
+          <li class="hide">
+            <a href="#"><i class="icon icon-site"></i><br>Сайт</a>
+          </li>
+        </ul>
+
+        <div id="main" class="tile show">
+          <ul>
+            <li>
+              <a href="#">Статьи</a>
+            </li>
+            <li>
+              <a href="#">Блог</a>
+            </li>
+            <li>
+              <a href="#">Практикум</a>
+            </li>
+            <li>
+              <a href="#">Тесты</a>
+            </li>
+            <li>
+              <a href="#">Форум</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <form id="search-box">
+        <input type="text" id="search_field" placeholder="Поиск по сайту">
+        <input type="image" src="template/images/find.png" alt="Найти" class="find">
+      </form>
+    </header>	<?php }} ?>

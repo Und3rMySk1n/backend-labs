@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HTML-СЃРїСЂР°РІРѕС‡РЅРёРє</title>
+    <title>HTML-справочник</title>
     <link rel="stylesheet" href="template/css/style.css" media="all">
   </head>
   <body>
@@ -11,7 +11,7 @@
       <nav>
         <ul id="topmenu">
           <li class="show">
-            <a href="#"><i class="icon icon-main"></i><br>РћСЃРЅРѕРІРЅРѕРµ</a>
+            <a href="#"><i class="icon icon-main"></i><br>Основное</a>
           </li>
           <li class="hide">
             <a href="#"><i class="icon icon-html"></i><br>HTML</a>
@@ -20,26 +20,26 @@
             <a href="#"><i class="icon icon-css"></i><br>CSS</a>
           </li>
           <li class="hide">
-            <a href="#"><i class="icon icon-site"></i><br>РЎР°Р№С‚</a>
+            <a href="#"><i class="icon icon-site"></i><br>Сайт</a>
           </li>
         </ul>
 
         <div id="main" class="tile show">
           <ul>
             <li>
-              <a href="#">РЎС‚Р°С‚СЊРё</a>
+              <a href="#">Статьи</a>
             </li>
             <li>
-              <a href="#">Р‘Р»РѕРі</a>
+              <a href="#">Блог</a>
             </li>
             <li>
-              <a href="#">РџСЂР°РєС‚РёРєСѓРј</a>
+              <a href="#">Практикум</a>
             </li>
             <li>
-              <a href="#">РўРµСЃС‚С‹</a>
+              <a href="#">Тесты</a>
             </li>
             <li>
-              <a href="#">Р¤РѕСЂСѓРј</a>
+              <a href="#">Форум</a>
             </li>
           </ul>
         </div>
@@ -47,7 +47,7 @@
 
 
       <form id="search-box">
-        <input type="text" id="search_field" placeholder="РџРѕРёСЃРє РїРѕ СЃР°Р№С‚Сѓ">
-        <input type="image" src="template/images/find.png" alt="РќР°Р№С‚Рё" class="find">
+        <input type="text" id="search_field" placeholder="Поиск по сайту">
+        <input type="image" src="template/images/find.png" alt="Найти" class="find">
       </form>
     </header>	

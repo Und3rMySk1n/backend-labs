@@ -2,19 +2,19 @@
 
     function PrintError($errorCode)
     {
-        $errMessages = array //СЂР°СЃС€РёС„СЂРѕРІРєР° РѕС€РёР±РѕРє Р·Р°РїРёСЃРё
+        $errMessages = array //расшифровка ошибок записи
         (
-            ERR_NO_SURVEY => 'РђРЅРєРµС‚Р° РЅРµ Р·Р°РґР°РЅР°, Р»РёР±Рѕ РѕРЅР° РїСѓСЃС‚Р°СЏ. <br>',
-            ERR_NO_FIRSTNAME => 'РќРµ Р·Р°РґР°РЅРѕ РёРјСЏ. <br>',
-            ERR_NO_LASTNAME => 'РќРµ Р·Р°РґР°РЅР° С„Р°РјРёР»РёСЏ. <br>',
-            ERR_NO_EMAIL => 'РќРµ Р·Р°РґР°РЅ e-mail. <br>',
-            ERR_NO_AGE => 'РќРµ Р·Р°РґР°РЅ РІРѕР·СЂР°СЃС‚. <br>',
-            ERR_NO_ACCESS_TO_FILE => 'РќРµС‚ РґРѕСЃС‚СѓРїР° Рє С„Р°Р№Р»Сѓ. <br>',
-            ERR_UNABLE_TO_PARSE => 'РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ С„РѕСЂРјР°С‚ С„Р°Р№Р»Р°. <br>',
-            ERR_NO_FILE => 'РўР°РєРѕРіРѕ С„Р°Р№Р»Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. <br>',
-            ERR_NO_ACCESS_TO_FILE => 'РќРµС‚ РґРѕСЃС‚СѓРїР° Рє С„Р°Р№Р»Сѓ. <br>',
-            ERR_UNABLE_TO_PARSE => 'РќРµРїСЂР°РІРёР»СЊРЅС‹Р№ С„РѕСЂРјР°С‚ С„Р°Р№Р»Р°. <br>',
-            ERR_FILE_NOT_WRITTEN => 'РќРµ СѓРґР°Р»РѕСЃСЊ Р·Р°РїРёСЃР°С‚СЊ С„Р°Р№Р». <br>'
+            ERR_NO_SURVEY => 'Анкета не задана, либо она пустая. <br>',
+            ERR_NO_FIRSTNAME => 'Не задано имя. <br>',
+            ERR_NO_LASTNAME => 'Не задана фамилия. <br>',
+            ERR_NO_EMAIL => 'Не задан e-mail. <br>',
+            ERR_NO_AGE => 'Не задан возраст. <br>',
+            ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
+            ERR_UNABLE_TO_PARSE => 'Неправильный формат файла. <br>',
+            ERR_NO_FILE => 'Такого файла не существует. <br>',
+            ERR_NO_ACCESS_TO_FILE => 'Нет доступа к файлу. <br>',
+            ERR_UNABLE_TO_PARSE => 'Неправильный формат файла. <br>',
+            ERR_FILE_NOT_WRITTEN => 'Не удалось записать файл. <br>'
         );
 
         echo $errMessages[$errorCode];

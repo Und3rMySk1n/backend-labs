@@ -9,7 +9,7 @@
         if ($errorCode == ERR_OK)
         {
             $surveyName = GetSurveyName($errorCode);            
-            echo 'Р¤Р°Р№Р» ' . $surveyName . ' СѓСЃРїРµС€РЅРѕ Р·Р°РїРёСЃР°РЅ.';
+            echo 'Файл ' . $surveyName . ' успешно записан.';
         }
         else
         {
