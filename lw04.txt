@@ -28,20 +28,30 @@
    ('Avengers', 2012),
    ('Kon Tiki', 2014),
    ('Predator', 1986),
-   ('Mulholland drive', 1990);
+   ('Mulholland drive', 1980);
    
    INSERT INTO customer 
    (first_name, last_name, passport_code, registration_date)
    VALUES
-   ('Ivan', 'Semenov',  '88 01 123456', '2010-21-05'),
+   ('Ivan', 'Semenov',  '88 01 123456', '2010-05-21'),
    ('Chuck', 'Norris',  '68 01 127776', '2012-07-01'),
    ('Gena', 'Bukin',  '76 06 467823', '2014-12-11'),
-   ('Stepan', 'Lyskov',  '82 12 114358', '2011-29-08');
+   ('Jonathan', 'Davis',  '82 12 114358', '2011-08-29');
    
-   INSERT INTO customer 
+   INSERT INTO offer
    (dvd_id, customer_id, offer_date, return_date)
    VALUES
-   (1, 3, '2015-10-01', '2015-10-02'),
-   (3, 1, '2015-29-01', '2015-29-02');
+   (1, 3, '2015-01-10', '2015-02-10'),
+   (3, 1, '2015-01-29', '2015-02-28');
+
+4. SELECT * FROM dvd WHERE production_year > 2010 ORDER BY title;
+
+5. SELECT * FROM dvd WHERE dvd_id IN (SELECT dvd_id FROM offer WHERE return_date > NOW());
    
-   
+6. SELECT c.first_name, c.last_name, d.title, o.offer_date
+   FROM offer AS o 
+   INNER JOIN customer AS c 
+   USING (customer_id)   
+   INNER JOIN dvd AS d
+   USING (dvd_id)
+   WHERE YEAR(o.offer_date) = YEAR(NOW());
