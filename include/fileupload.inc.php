@@ -1,0 +1,89 @@
+<?php
+    
+    define('ERR_NO_UPLOADED_FILE', 1);
+    define('ERR_NOT_IMAGE', 2);
+    define('ERR_TOO_BIG_IMAGE', 3);
+    define('ERR_NOT_UPLOADED', 4);
+    
+    function uploadFile($filename, &$errorCode)
+    {
+        $uploadDir = "upload";
+        $file = getUploadedFile($filename, $errorCode);
+        if ($errorCode === ERR_OK)
+        {
+            checkImageSize($file, $errorCode);
+        }
+        
+        if ($errorCode === ERR_OK)
+        {
+            checkImageType($file, $errorCode); //Допустимые типы файлов - PNG и JPEG
+        }
+        
+        if ($errorCode === ERR_OK)
+        {
+            $destination = $uploadDir . '/' . $file[name];
+            if (!move_uploaded_file($file[tmp_name], $destination))
+            {
+                $errorCode = ERR_NOT_UPLOADED;
+            }
+        }
+        
+        return $errorCode;
+    }
+    
+    function getUploadedFile($filename, &$errorCode)
+    {
+        $file = $_FILES[$filename];
+        if (empty($file[name]))
+        {
+            $errorCode = ERR_NO_UPLOADED_FILE;
+        }
+        return ($errorCode === ERR_OK) ? $file : false;
+    }
+    
+    function checkImageType($file, &$errorCode)
+    {
+        if (($file[type] != 'image/jpeg') AND ($file[type] != 'image/png'))
+        {
+            $errorCode = ERR_NOT_IMAGE;
+        }
+    }
+    
+    function checkImageSize($file, &$errorCode)
+    {
+        if (($file[error] == 1) OR ($file[error] == 2))
+        {
+            $errorCode = ERR_TOO_BIG_IMAGE;
+        }
+    }
+    
+    function loadImages($dir)
+    {
+        $imagesList = scandir($dir);
+        return (!empty($imagesList[2])) ? $imagesList : false;
+    }
+    
+    function showImages($imagesDir)
+    {
+        $imagesList = loadImages($imagesDir);
+        foreach ($imagesList as $key => $value)
+        {
+            if (($value != '.') AND ($value != '..'))
+            {
+                echo '<img class="gallery_image" src="' . $imagesDir . '/' . $value . '">';
+            }
+        }
+    }
+    
+    function printUploadError($errorCode)
+    {
+        $uploadError = array
+        (
+            ERR_NO_UPLOADED_FILE => 'Не указан файл для загрузки. <br>',
+            ERR_NOT_IMAGE => 'Выбранный файл не является изображением. <br>',
+            ERR_TOO_BIG_IMAGE => 'Файл слишком большой. <br>',
+            ERR_NOT_UPLOADED => 'Файл не был загружен. <br>'
+        );
+
+        echo '<p class="error_message">' . $uploadError[$errorCode] . '</p>';
+    }

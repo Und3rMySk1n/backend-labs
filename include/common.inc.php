@@ -6,6 +6,7 @@
     include('include/survey.inc.php');
     include('include/request.inc.php');
     include('include/strength.inc.php');
+    include('include/fileupload.inc.php');
     
     include('include/database.inc.php');
     include('include/dvd.inc.php');

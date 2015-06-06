@@ -50,8 +50,6 @@
    
 6. SELECT c.first_name, c.last_name, d.title, o.offer_date
    FROM offer AS o 
-   INNER JOIN customer AS c 
-   USING (customer_id)   
-   INNER JOIN dvd AS d
-   USING (dvd_id)
+   INNER JOIN customer AS c USING (customer_id)   
+   INNER JOIN dvd AS d USING (dvd_id)
    WHERE YEAR(o.offer_date) = YEAR(NOW());
