@@ -68,7 +68,8 @@
         $imagesList = loadImages($imagesDir);
         foreach ($imagesList as $key => $value)
         {
-            if (($value != '.') AND ($value != '..'))
+            $fileInfo = @getimagesize($imagesDir . '/' . $value);
+            if (in_array($fileInfo[2], array(2, 3)))
             {
                 echo '<img class="gallery_image" src="' . $imagesDir . '/' . $value . '">';
             }
