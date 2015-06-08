@@ -5,6 +5,7 @@
     (
         'title' => "Форма загрузки изображений"
     );
+    $imagesDir = 'upload';
     
     echo GetView('upload_header.tpl', $vars);
     
@@ -12,7 +13,7 @@
     if (isset($_POST['uploadFileButton']))
     {
         $filename = 'filename';
-        uploadFile($filename, $errorCode);
+        uploadFile($filename, $imagesDir, $errorCode);
         if ($errorCode === ERR_OK) 
         {
             echo '<p>Файл успешно загружен.</p>';
@@ -23,7 +24,6 @@
         }
     }
     
-    $imagesDir = 'upload';
     if (loadImages($imagesDir) != false)
     {
         echo '<h2>Список загруженных изображений</h2>';

@@ -5,9 +5,9 @@
     define('ERR_TOO_BIG_IMAGE', 3);
     define('ERR_NOT_UPLOADED', 4);
     
-    function uploadFile($filename, &$errorCode)
-    {
-        $uploadDir = "upload";
+    
+    function uploadFile($filename, $imagesDir, &$errorCode)
+    {        
         $file = getUploadedFile($filename, $errorCode);
         if ($errorCode === ERR_OK)
         {
@@ -21,7 +21,7 @@
         
         if ($errorCode === ERR_OK)
         {
-            $destination = $uploadDir . '/' . $file[name];
+            $destination = $imagesDir . '/' . $file[name];
             if (!move_uploaded_file($file[tmp_name], $destination))
             {
                 $errorCode = ERR_NOT_UPLOADED;
